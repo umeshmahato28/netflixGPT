@@ -3,6 +3,8 @@ import Login from "./Login";
 import Browse from "./Browse";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Signup from "./Signup";
+import MoviePage from "./MoviePage";
+import Error from "./Error";
 
 const Body = () => {
 
@@ -19,6 +21,14 @@ const Body = () => {
       path: "/signup",
       element: <Signup />,
     },
+    {
+      path: "/browse/:movieId",
+      element: <MoviePage />
+  },
+  {
+      path: '*',
+      element: <Error />
+  }
   ]);
 
   return (
