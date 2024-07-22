@@ -6,7 +6,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { LOGIN_BG, USER_AVATAR, LOGIN_MOBILE_BG } from "../utils/constants";
+import { LOGIN_BG, USER_AVATAR } from "../utils/constants";
 
 const Signup = () => {
   const [errorMessage, setErrorMessage] = useState(null);

@@ -6,7 +6,7 @@ import { addTrendingMovies } from "../utils/movieSlice";
 const useTrendingMovies = () => {
   // Fetch Data from TMDB API and update store
   const dispatch = useDispatch();
-
+  // React Redux store
   const trendingMovies = useSelector((store) => store.movies.trendingMovies);
 
   const getTrendingMovies = async () => {

@@ -1,4 +1,3 @@
-require('dotenv').config();
 export const LOGIN_MOBILE_BG =
   "https://wallpapers.ispazio.net/wp-content/uploads/2023/04/IMG_2633-400x866.jpg";
 export const LOGO =

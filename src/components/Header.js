@@ -12,7 +12,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
-const showGptSearch = useSelector((store) => store.gpt.showGptSearch)
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -60,11 +60,19 @@ const showGptSearch = useSelector((store) => store.gpt.showGptSearch)
       <img className="md:w-48 pt-4 w-28 " src={LOGO} alt="logo" />
       {user && (
         <div className="flex p-2 items-center  sm:gap-x-2 lg:gap-0">
-        <button className='py-2 px-4 text-white bg-purple-800 rounded-md mx-4' onClick={handleGptSearchClick}>{!showGptSearch ? "GPT Search" : "Home"}</button>
-          
-          
-        <button className='px-4 py-2 bg-red-700 text-white font-semibold rounded-md' onClick={handleSignOut}>Logout</button>
+          <button
+            className="py-2 px-4 text-white bg-purple-800 rounded-md mx-4"
+            onClick={handleGptSearchClick}
+          >
+            {!showGptSearch ? "GPT Search" : "Home"}
+          </button>
 
+          <button
+            className="px-4 py-2 bg-red-700 text-white font-semibold rounded-md"
+            onClick={handleSignOut}
+          >
+            Logout
+          </button>
         </div>
       )}
     </div>

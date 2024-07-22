@@ -5,7 +5,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { LOGIN_BG, LOGIN_MOBILE_BG } from "../utils/constants";
+import { LOGIN_BG } from "../utils/constants";
 import { Link } from "react-router-dom";
 
 const Login = () => {

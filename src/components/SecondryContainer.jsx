@@ -8,7 +8,7 @@ const SecondryContainer = () => {
   return (
     <>
       <div className="scrollbar-hide  bg-black pb-10">
-        <div className=" md:-mt-[10%] md:pt-0 pt-[25%] lg:pl-12  relative z-36">
+        <div className=" md:pt-20 pt-[25%] lg:pl-12  relative z-36">
           <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} />
           <MovieList title={"Top Rated"} movies={movies.trendingMovies} />
           <MovieList title={"Popular"} movies={movies.popularMovies} />

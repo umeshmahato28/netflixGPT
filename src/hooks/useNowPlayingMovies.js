@@ -1,4 +1,3 @@
-
 import { useDispatch } from "react-redux";
 import {addNowPlayingMovies} from "../utils/movieSlice"
 import { useEffect } from "react";

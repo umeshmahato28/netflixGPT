@@ -3,10 +3,8 @@ import Login from "./Login";
 import Browse from "./Browse";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Signup from "./Signup";
-import { useDispatch } from "react-redux";
 
 const Body = () => {
-  const dispatch = useDispatch();
 
   const appRouter = createBrowserRouter([
     {
