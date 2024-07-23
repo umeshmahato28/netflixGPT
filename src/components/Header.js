@@ -5,7 +5,6 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { LOGO } from "../utils/constants";
-import showGptSearch from "../utils/gptSlice";
 import { toggleGptSearchView } from "../utils/gptSlice";
 
 const Header = () => {
