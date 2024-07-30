@@ -1,24 +1,25 @@
 import { useDispatch } from "react-redux";
-import {addNowPlayingMovies} from "../utils/movieSlice"
-import { useEffect } from "react";
+import { addNowPlayingMovies } from "../utils/movieSlice";
+import { useCallback, useEffect } from "react";
 import { API_OPTIONS } from "../utils/constants";
 
 const useNowPlayingMovies = () => {
-      const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-      const getNowPlayingMovies = async () => {
-        const data = await fetch(
-          "https://api.themoviedb.org/3/movie/now_playing?page=1",
-          API_OPTIONS
-        );
-        const json = await data.json();
-        // console.log(json.results);
-        dispatch(addNowPlayingMovies(json.results))
-      };
-    
-      useEffect(() => {
-        getNowPlayingMovies();
-      }, []);
-}
+  const getNowPlayingMovies = useCallback(async () => {
+    const data = await fetch(
+      "https://api.themoviedb.org/3/movie/now_playing?page=1",
+      API_OPTIONS
+    );
+    const json = await data.json();
+    dispatch(addNowPlayingMovies(json.results));
+  }, [dispatch]);
 
-export default useNowPlayingMovies
+  useEffect(() => {
+    getNowPlayingMovies();
+  }, [getNowPlayingMovies]);
+
+  // Note: You should return any cleanup function if needed
+};
+
+export default useNowPlayingMovies;
