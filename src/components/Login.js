@@ -82,7 +82,7 @@ const Login = () => {
           Sign In
         </button>
         <p className="py-4 cursor-pointer" onClick={handleButtonClick}>
-          New to Netflix? <Link to="/signup">Sign Up Now</Link>
+          New to Netflix? <Link className="hover:underline" to="/signup">Sign Up Now</Link>
         </p>
       </form>
     </div>

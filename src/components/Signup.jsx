@@ -98,7 +98,7 @@ const Signup = () => {
           Register
         </button>
         <p className="py-4">
-          Already Registered? <Link to="/">Sign In</Link>
+          Already Registered? <Link className="hover:underline" to="/">Sign In</Link>
         </p>
       </form>
     </div>
