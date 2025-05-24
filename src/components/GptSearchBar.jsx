@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import {model} from '../utils/geminiai'
 import { useDispatch } from "react-redux";
 import { API_OPTIONS } from "../utils/constants";
