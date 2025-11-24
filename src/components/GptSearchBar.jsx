@@ -66,7 +66,7 @@ const GptSearchBar = () => {
           onClick={handleGptSearchClick}
           className="bg-red-600 rounded-lg  text-white col-span-3 "
         >
-          Search
+          Search 
         </button>
       </form>
     </div>
